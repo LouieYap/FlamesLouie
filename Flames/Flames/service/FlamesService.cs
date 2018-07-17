@@ -9,44 +9,26 @@ namespace Flames.service
 
     {
 
-
         public string  calculateFlames(string name, string partnerName) {
 
             var length = getNameLength(name, partnerName);
-            int index = 0;
+            string flames = "FLAMES";
+            var temp = "";
 
-            while ("FLAMES".Length != 1)
-            {
-
-                index = length % 6;
-
-
-
-                if (index == 0)
+                while (flames.Length != 1)
                 {
-
-                    FLAMES = FLAMES.replace(String.valueOf(arr_FLAMES[FLAMES.length() - 1]), "");
-
-                    arr_FLAMES = FLAMES.toCharArray();
-
+                    int tmpLen = length % flames.Length;
+                    if (tmpLen != 0)
+                    {
+                        temp = flames.Substring(tmpLen) + flames.Substring(0, tmpLen - 1);
+                    }
+                    else
+                    {
+                        temp = flames.Substring(0, flames.Length- 1);
+                    }
+                    flames = temp;
                 }
-                else
-                {
-
-                    FLAMES = FLAMES.replace(String.valueOf(arr_FLAMES[index - 1]), "");
-
-                    FLAMES = FLAMES.substring(index - 1) + FLAMES.substring(0, index - 1);
-
-                    arr_FLAMES = FLAMES.toCharArray();
-
-                }
-
-
-
-                flamesLength--;
-
-            }
-
+            return flames;
 
 
         }

@@ -1,9 +1,7 @@
 ﻿using Flames.model;
 using Flames.service;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -90,27 +88,27 @@ namespace Flames.ViewModel
             {
                 case "F":
                     fr.relationship = "Friends";
-                    fr.meaning = "Meaning Friends";
+                    fr.meaning = "You are Friends";
                     break;
                 case "L":
                     fr.relationship = "Lovers";
-                    fr.meaning = "Meaning Lovers";
+                    fr.meaning = "You are Lovers";
                     break;
                 case "A":
                     fr.relationship = "Attraction";
-                    fr.meaning = "Meaning Attraction";
+                    fr.meaning = "You are Attracted";
                     break;
                 case "M":
                     fr.relationship = "Married";
-                    fr.meaning = "Meaning Married";
+                    fr.meaning = "You are Married";
                     break;
                 case "E":
                     fr.relationship = "Enemies";
-                    fr.meaning = "Meaning Enemies";
+                    fr.meaning = "You are Enemies";
                     break;
                 case "S":
                     fr.relationship = "Siblings";
-                    fr.meaning = "Meaning Siblings";
+                    fr.meaning = "You are Siblings";
                     break;
             }
             return fr;

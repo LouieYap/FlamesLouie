@@ -9,7 +9,7 @@
         <Label TextColor="#B92626" FontAttributes="Bold" FontSize = "Large" Text="LOVE CALCULATOR" HorizontalOptions="CenterAndExpand" />
         <Entry Text="{Binding Name}" Placeholder="Your Name" FontSize="Medium" />
         <Entry Text="{Binding PartnerName}" Placeholder="Partner's Name" FontSize="Medium" />
-        <Button Text="Check Flames" Command="{Binding FlamesCommand}"  BackgroundColor="#B92626" TextColor="#FFFFFF"/>
+        <Button Text="Check Flames" Command="{Binding FlamesCommand}" Clicked="OnFlamesClicked" BackgroundColor="#B92626" TextColor="#FFFFFF"/>
         <ContentView Padding="20" BackgroundColor="#FFDDDD" IsVisible="{Binding ShouldDisplayContentView}">
             <ContentView.Content>
                 <StackLayout Orientation="Vertical">
